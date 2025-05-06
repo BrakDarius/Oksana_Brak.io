@@ -12,11 +12,11 @@
   <nav>
     <a href="#abschnitt1">Vorstellung</a>
     <a href="#abschnitt2">Partner</a>
-    <a href="#abschnitt3">Ferienwohnung</a>
+    <a href="Ferienwohnung.html">Ferienwohnung</a>
   </nav>
 
   <section id="abschnitt1">
-    <h1>Vorstellung</h1>
+    <h1>Herzlich Willkommen</h1>
 
     <div class="image-text">
       <img src="Beispielbild.jpg" alt="Beispielbild">
@@ -58,76 +58,6 @@
       </div>
     </div>
   </section>
-
-  <section id="abschnitt3">
-    <div>
-      <h2>Dritte Überschrift</h2>
-      <p>Willkommen an einem Ort, der mehr bietet als nur ein Dach über dem Kopf.
-          Hier in Bad Zwischenahn erwartet dich ein liebevoll eingerichtetes Apartment, das modernes Wohnen, Komfort und Nachhaltigkeit vereint. Doch hinter dieser Ferienwohnung steckt mehr: eine Idee.
-          
-          Nach vielen Jahren Erfahrung mit internationalen Marken habe ich gelernt, wie stark Produkte wirken können - wenn sie Qualität, Werte und Stil transportieren. Heute setze ich dieses Wissen ein, um ein einzigartiges Gastgeberinnen-Konzept zu schaffen:
-          Mit sorgfältig ausgewählten, veganen und biozertifizierten Produkten aus Italien wird dein Aufenthalt nicht nur angenehm, sondern inspirierend.
-          
-          Ob zum Entspannen, Arbeiten oder einfach, um neue Energie zu tanken - vielleicht findest du hier mehr als Erholung.</p>
-      
-      
-      <div class="box">
-
-        <h2>Zeitraum</h2>
-
-        <label for="range">Zeitraum im Kalender:</label>
-        <input id="range" type="text" placeholder="Klicke zum Auswählen" readonly>
-
-        <label for="people">Anzahl Personen:</label>
-        <input id="people" type="number" min="1" placeholder="z.B. 4">
-
-        <button onclick="anzeigen()">Bestätigen</button>
-
-        <div class="result" id="ausgabe"></div>
-    </div>
-  </section>
-
-
-    </div>
-    
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-flatpickr("#range", {
-    mode: "range",
-    dateFormat: "d.m.Y",
-    locale: "de",
-    disable: [
-    "15-04-2025",
-    "20-04-2025",
-    function(date) {
-        return date < new Date(); // Alle vergangenen Tage deaktivieren
-    }
-    ]
-});
-
-function anzeigen() {
-    const zeitraum = document.getElementById("range").value;
-    const personen = document.getElementById("people").value;
-
-    if (!zeitraum || !personen) {
-    alert("Bitte Zeitraum und Personenanzahl eingeben.");
-    return;
-    }
-
-    const ausgabe = document.getElementById("ausgabe");
-    ausgabe.innerHTML = `<strong>Zeitraum:</strong> ${zeitraum}<br><strong>Personen:</strong> ${personen}`;
-    ausgabe.style.display = "block";
-}
-</script>
-
-
-
-
-
-
 
 </body>
 </html>
